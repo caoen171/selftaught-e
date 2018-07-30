@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as userActions from '../actions/userActions';
 import Heading from './Heading';
 import LandingPage from './LandingPage';
-import TextTest from './TextTest';
+import TextTest from '../components/texttest/TextTest';
 import Footer from './FooterComp';
 import TestPlace from './TestPlace';
 import Profile from './Profile';
