@@ -2,11 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const keys = require('./configs/keys');
-const socket = require('socket.io');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 
 require('./models/User');
+require('./models/Test');
 
 mongoose.connect(keys.mongoURI,
     { useNewUrlParser: true }
@@ -32,6 +32,7 @@ app.use(passport.session());
 
 require('./routes/authRoute')(app);
 require('./routes/userRoute')(app);
+require('./routes/texttestRoute')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
@@ -49,4 +50,7 @@ server.listen(port, () => {
 
 io.on('connection', (socket) => {
     console.log('helloo sockeetttt');
+    socket.on('test',()=>{
+         console.log('test ok');
+    })
 })
