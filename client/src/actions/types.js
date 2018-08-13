@@ -5,3 +5,5 @@ export const FETCH_TESTS = 'fetch_tests';
 export const FETCH_TEST = 'fetch_test';
 export const DELETE_TEST = 'delete_test';
 export const UPDATE_TEST = 'update_test';
+export const ADD_VIDEO = 'add_video';
+export const FETCH_VIDEO = 'fetch_video';

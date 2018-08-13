@@ -22,7 +22,6 @@ export const fetchTest = (_id) => async dispatch =>{
 
 export const deleteTest = (_id) => async dispatch =>{
     console.log('hello anh em')
-    const res = await axios.delete(`/api/texttest/${_id}`)
     dispatch ({
         type: DELETE_TEST,
         payload: _id

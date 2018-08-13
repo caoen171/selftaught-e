@@ -7,6 +7,7 @@ const cookieSession = require('cookie-session');
 
 require('./models/User');
 require('./models/Test');
+require('./models/Video');
 
 mongoose.connect(keys.mongoURI,
     { useNewUrlParser: true }
@@ -33,6 +34,7 @@ app.use(passport.session());
 require('./routes/authRoute')(app);
 require('./routes/userRoute')(app);
 require('./routes/texttestRoute')(app);
+require('./routes/videoRoute')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));

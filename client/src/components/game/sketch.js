@@ -25,7 +25,7 @@ export default function sketch(p) {
   };
   // cap nhat chuyen dong
   const update = () => { 
-    if(total == xtail.length){
+    if(total === xtail.length){
       for(var i = 0; i < xtail.length - 1; i++){
         xtail[i] = xtail[i+1];
         ytail[i] = ytail[i+1];

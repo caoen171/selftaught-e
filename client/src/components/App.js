@@ -15,6 +15,8 @@ import Dashboard from './Dashboard';
 import Game from './game/Game';
 import TextTestDisplay from './texttest/texttest_individual/TextTestDisplay'
 import TextTestEditForm from './texttest/TextTestEditForm';
+import GameWithVideo from './GameWithVideo/GameWithVideo';
+import GWVAddData from './FormInsertDataForVideoGame/GWVAddData';
 
 
 
@@ -39,6 +41,8 @@ class App extends Component {
               <Route exact={true} path='/game' component={Game} />
               <Route exact={true} path='/texttest/:_id' component={TextTestDisplay}/>
               <Route exact={true} path='/texttest/edit/:_id' component={TextTestEditForm}/>
+              <Route exact= {true} path = '/gameWithVideo/:_id' component= {GameWithVideo}/>
+              <Route exact = {true } path ='/addVideo' component = {GWVAddData}/>
               <Footer/>
             </div>
             

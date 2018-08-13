@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {updateTest, fetchTest} from '../../actions/texttestActions';
 import {connect} from 'react-redux';
 import {withRouter, Link} from 'react-router-dom';
-import isEmpty from '../../validation/isEmpty';
 import _ from 'lodash';
 
 
